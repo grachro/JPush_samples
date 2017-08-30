@@ -14,8 +14,6 @@ import java.util.Map;
 
 public class SendBigTextSample {
 
-    public static int BIG_TEXT_STYLE = 1; //jpushのAPIからは、定数が発見できませんでした
-
     public static void main(String[] args) throws APIConnectionException, APIRequestException {
 
         String appkey = args[0];
@@ -33,8 +31,11 @@ public class SendBigTextSample {
         extras.put("key1", "val1");
         extras.put("key2", "val2");
 
+        // styleに何を入れるのかドキュメントが見つけられませんでした。
+        // AndroidNotification.javaにstyleは0 ~ 4とのコメントがありました。
+        // Big Text Styleは1のようです
         AndroidNotification androidNotification = AndroidNotification.newBuilder()
-                .setStyle(BIG_TEXT_STYLE)
+                .setStyle(1)
                 .setTitle("＊BigText＊Title＊")
                 .setAlert("＊＊alert:2＊＊")
                 .setBigText("BigText🐼Line1、\nBigText🐨Line2\nBigText🐯Line3")
