@@ -6,10 +6,6 @@ import cn.jpush.api.push.model.audience.AudienceTarget
 import cn.jpush.api.push.model.notification.AndroidNotification
 import cn.jpush.api.push.model.notification.Notification
 
-import java.util.HashMap
-
-
-
 fun main(args: Array<String>) {
 
     val appkey = args[0]
